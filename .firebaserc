@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "cse134b-castro-lin-you-hw2"
+    "default": "cse134b-castro-lin-you-hw2",
+    "staging": "cse134b-castro-lin-you-hw2"
   }
 }
