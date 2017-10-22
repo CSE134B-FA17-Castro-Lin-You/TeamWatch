@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Global Attributes Page</title>
+  <meta name="description" content="HW2 Main Page">
+  <meta name="author" content="Castro-Lin-You">
+  <style>    
+    p.important {
+        color: red;
+            
+    }
+    p.notImportant{
+        color:blue;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Global Attributes Page</h1>
+
+  <h3>accesskey attribute test:</h3>
+  <a href="http://www.nyan.cat/" accesskey="n">Nyan Cat</a><br>    
+    <p><strong>Note:</strong> The shortcut is varying in different browsers:</p>
+  <ul>
+        <li>IE, Chrome, Safari, Opera 15+: [ALT] + <em>accesskey</em></li>
+        <li>Opera prior version 15: [SHIFT] [ESC] + <em>accesskey</em></li>
+        <li>Firefox: [ALT] [SHIFT] + <em>accesskey</em></li>
+  </ul>
+  
+   <h3>class attribute test:</h3>
+   <p class="important">I Love Cats. :)</p>
+   <p class="important">Cats > Dogs. :)</p>
+   <p class="notImportant"> Dogs vs Cats<p> 
+       
+   <h3>contenteditable attribute test:</h3>
+   <p><strong>Note:</strong> The following paragraph is editable:</p>
+   <p contenteditable="true">Warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats. Always ensure to lay down in such a manner that tail can lightly brush human's nose . Small kitty warm kitty little balls of fur cough hairball on conveniently placed pants meow meow, i tell my human, lick face hiss at owner, pee a lot, and meow repeatedly scratch at fence purrrrrr eat muffins and poutine until owner comes back so fooled again thinking the dog likes me for pushes butt to face. Mrow. Favor packaging over toy hopped up on catnip, yet get video posted to internet for chasing red dot dream about hunting birds make meme, make cute face. Meow to be let in behind the couch steal the warm chair right after you get up. Chew foot. Woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now lick sellotape so a nice warm laptop for me to sit on, meowing chowing and wowing rub face on owner freak human out make funny noise mow mow mow mow mow mow success now attack human so pee in the shoe. I cry and cry and cry unless you pet me, and then maybe i cry just for fun stare at wall turn and meow stare at wall some more meow again continue staring or always hungry. Hack up furballs mrow mrow. Poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy fur-balls eat half my food and ask for more. Chew on cable chew on cable play riveting piece on synthesizer keyboard and intrigued by the shower, for cat snacks hate dog drool. Sit by the fire if it fits, i sits need to chase tail.</p>
+    
+   <h3>dir attribute test:</h3>
+    <p dir="rtl">I cry and cry and cry unless you pet me, and then maybe i cry just for fun stare at wall turn and meow stare at wall some more meow again continue staring or always hungry.Poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy fur-balls eat half my food and ask for more. Chew on cable chew on cable play riveting piece on synthesizer keyboard and intrigued by the shower, for cat snacks hate dog drool. Sit by the fire if it fits, i sits need to chase tail.Poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy fur-balls eat half my food and ask for more. Chew on cable chew on cable play riveting piece on synthesizer keyboard and intrigued by the shower, for cat snacks hate dog drool. Sit by the fire if it fits, i sits need to chase tail.</p>
+     
+    <h3>hidden attribute test:</h3>
+    <p hidden>This paragraph should be hidden because the cats made me do it.Cats secretly make all the worlds muffins refuse to leave cardboard box for vommit food and eat it again or mew caticus cuteicus. And sometimes switches in french and say "miaou" just because well why not purrr purr littel cat, little cat purr purr for demand to be let outside at once, and expect owner to wait for me as i think about it lie on your belly and purr when you are asleep. </p>
+    <p>This is the only paragraph the cats wanted you to see :-). Theres a hidden paragrap above this one.</p>
+    
+     <h3>id attribute test:</h3>
+     <h1 id="myHeader">In Bobby's world, there are kittens but no cats!</h1>
+    <button onclick="displayResult()">Change text</button>
+
+    <script>
+    function displayResult() {
+        document.getElementById("myHeader").innerHTML = "In Bob's world, there are cats but no kittens!!";
+    }
+    </script>
+    
+    <h3>lang attribute test:</h3>
+    <p>Step on your keyboard while you're gaming and then turn in a circle licks your face but plop down in the middle where everybody walks yet purr or go into a room to decide you didn't want to be in there anyway. Lick yarn hanging out of own butt meowing chowing and wowing make muffins, and jump around on couch, meow constantly until given food, meow meow so howl on top of tall thing. Gnaw the corn cob..</p>
+    <p lang="fr">
+    Hakbang sa iyong keyboard habang ikaw ay paglalaro at pagkatapos ay i-on ang isang bilog licks iyong mukha ngunit lumakad pababa sa gitna kung saan ang lahat ay naglalakad pa purr o pumunta sa isang silid upang magpasya hindi mo nais na maging doon pa rin. Lick yarn hanging out of own butt meowing chowing and wowing make muffins, and jump around around couch, meow constant until given food, meow meow so howl on top of tall thing. Makisig ang mais na mais..</p>
+  
+    <h3>spellcheck attribute test:</h3>
+    <p contenteditable="true" spellcheck="true">Step on your keyboard while you're gaming and then turn in a circle licks your face but plop down in the middle where everybody walks yet purr or go into a room to decide you didn't want to be in there anyway. Lick yarn hanging out of own butt meowing chowing and wowing make muffins, and jump around on couch, meow constantly until given food, meow meow so howl on top of tall thing. Gnaw the corn cob..</p>
+    
+    <h3>style attribute test:</h3>
+    <p style="color:blue;text-align:center">Cats are blue</p>
+    <p style="color:green">Kittens are green.</p>
+    <p style="color:red;text-align:center">Cats are blue</p>
+    <p style="color:yello">Kittens are green.</p>
+    <p style="color:brown;text-align:center">Cats are blue</p>
+    <p style="color:purple">Kittens are green.</p>
+    <p style="color:orange;text-align:center">Cats are blue</p>
+    <p style="color:grey">Kittens are green.</p>
+    
+    <h3>tabindex attribute test:</h3>
+    <a href="http://cat-bounce.com/" tabindex="2">Cat Bounce</a>
+    <a href="http://realgrumpycat.tumblr.com/" tabindex="1">Grumpy Cat</a>
+    <a href="http://thekittencovers.tumblr.com/" tabindex="3">Kitten Covers</a>
+    
+    <h3>title attribute test:</h3>
+    <p><abbr title="World Cat Organization">WHO</abbr> was founded in 1948.</p>
+    <p title="Free How To Be A Cat Tutorial">HowToBeCat.com</p>
+
+    
+</body>
+</html>
