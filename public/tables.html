@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Tables</title>
+    <meta name="description" content="A HTML document to test all ttable functions.">
+    <meta name="author" content="Catsro-Lin-You">
+
+    <style>
+    table, th, td{
+      border: 5;
+      padding: 10;
+      border-spacing: 5;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <table>
+        <caption>Cat Meme Counter </caption>
+        <colgroup>
+          <col style="background-color:#fcc7c7">
+          <col span="2" style="background-color:#c7cbfc">
+        </colgroup>
+        <thead>
+          <tr>
+              <th>Icon</th>
+              <th>Name</th>
+              <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="/images/tables/longcat.gif" alt="Long Cat"></td>
+            <td>Long Cat</td>
+            <td>7153</td>
+          </tr>
+          <tr>
+            <td><img src="/images/tables/grumpycat.gif" alt="Grumpy Cat"></td>
+            <td>Grumpy Cat</td>
+            <td>6123</td>
+          </tr>
+          <tr>
+            <td><img src="/images/tables/nyancat.gif" alt="Nyan Cat"></td>
+            <td>Nyan Cat</td>
+            <td>6090</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td>Total</td>
+            <td>65</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+    <footer><a href="/hw2.html">Return to top level page</a></footer>
+  </body>
+</html>

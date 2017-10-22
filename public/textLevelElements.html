@@ -4,199 +4,221 @@
     <meta charset="utf-8">
 
     <title>Text Level Elements</title>
-    <meta name="description" content="A HTML document to rest all text level elements.">
-    <meta name="author" content="Catrro-Lin-You">
+    <meta name="description" content="A HTML document to test all text level elements.">
+    <meta name="author" content="Catsro-Lin-You">
   </head>
   <body>
-      <main>
-      <a href="http://writtenkitten.net/">Written Kitten?</a>
+    <main>
 
-      <!-- italics when representing emphasis -->
-      <p><em>Cats</em> are superior to doggos</p>
+    <h3>Testing &lt;a&gt; element</h3>
+    <a href="http://writtenkitten.net/">Written Kitten?</a>
 
-      <hr>
+    <!-- italics when representing emphasis -->
+    <h3>Testing &lt;em&gt; element</h3>
+    <p><em>Cats</em> are superior to doggos</p>
 
-  	<!-- bold for strong importance-->
-      <p><strong>Cats</strong> are stronger than doggos</p>
+    <hr>
 
-      <hr>
+	  <!-- bold for strong importance-->
+    <h3>Testing &lt;em&gt; element</h3>
+    <p><strong>Cats</strong> are stronger than doggos</p>
 
-  	<!-- smaller font; side comments-->
-      <p><small>smol cats are cute</small></p>
+    <hr>
 
-      <hr>
+	  <!-- smaller font; side comments-->
+    <h3>Testing &lt;em&gt; element</h3>
+    <p><small>smol cats are cute</small></p>
 
-  	<!-- contents that are no longer accurate / relevant -->
-      <h1>Cat meme rankings:</h1>
-      <ul>
-        <li><s>Rank 1: Long cat</s></li>
-        <li><s>Rank 2: Grumpy Cat</s></li>
-   	  <li>Rank 1: Grumpy Cat</li>
-        <li>Rank 2: Long Cat</li>
-        <li>Rank 3: Nyan Cat</li>
-      </ul>
+    <hr>
 
-      <hr>
+	  <!-- contents that are no longer accurate / relevant -->
+    <h3>Testing &lt;s&gt; element</h3>
+    <h1>Cat meme rankings:</h1>
+    <ul>
+      <li><s>Rank 1: Long cat</s></li>
+      <li><s>Rank 2: Grumpy Cat</s></li>
+ 	  <li>Rank 1: Grumpy Cat</li>
+      <li>Rank 2: Long Cat</li>
+      <li>Rank 3: Nyan Cat</li>
+    </ul>
 
-      <!-- reference to a creative work -->
-      <img src="http://78.media.tumblr.com/8b54aacd170570748fd86c96aeadeef8/tumblr_o943prqPZ01ri5e18o1_400.png" alt="gdi cat"><cite> --pistachiozombie
-      	<a href="http://pistachiozombie.tumblr.com/post/146248507561/thanks">October 22, 2016</a></cite>
+    <hr>
 
-      <hr>
+    <!-- reference to a creative work -->
+    <h3>Testing &lt;cite&gt; element</h3>
+    <img src="http://78.media.tumblr.com/8b54aacd170570748fd86c96aeadeef8/tumblr_o943prqPZ01ri5e18o1_400.png" alt="gdi cat"><cite> --pistachiozombie
+    	<a href="http://pistachiozombie.tumblr.com/post/146248507561/thanks">October 22, 2016</a></cite>
 
-      <!-- phrasing content quoted from another source -->
-      <p>The cat said <q>Give me my wet food, you can opener</q>. But I pretended to ignore him.</p>
+    <hr>
 
-      <hr>
+    <!-- phrasing content quoted from another source -->
+    <h3>Testing &lt;q&gt; element</h3>
+    <p>The cat said <q>Give me my wet food, you can opener</q>. But I pretended to ignore him.</p>
 
-      <!-- dfn is defining instance of a term -->
-      <p>The <dfn id=csg><abbr title="Cat Simeowlator Game">CSG</abbr></dfn> is a game my partner Julian and I tried to create where the player tries to survive as a stray cat.</p>
-      <p>Everyone should help fund <a href=csg><abbr title="Cat Simeowlator Game">CSG</abbr></a> so we can let everyone feel the pain of these poor, homeless cats</p>
+    <hr>
 
-      <hr>
+    <!-- dfn is defining instance of a term -->
+    <h3>Testing &lt;dfn&gt; and &lt;abbr&gt; element</h3>
+    <p>The <dfn id=csg><abbr title="Cat Simeowlator Game">CSG</abbr></dfn> is a game my partner Julian and I tried to create where the player tries to survive as a stray cat.</p>
+    <p>Everyone should help fund <a href=csg><abbr title="Cat Simeowlator Game">CSG</abbr></a> so we can let everyone feel the pain of these poor, homeless cats</p>
 
-      <!-- abbr represents an abbreviation or acrynom. just like the ex above -->
-      <p><abbr title="Long Cat">LC</abbr> is definitely cuter than that <abbr title="Grumpy Cat">GC</abbr>.</p>
+    <hr>
 
-      <hr>
+    <!-- data represents it's contents + machine readable form in "value" -->
+    <h3>Testing &lt;data&gt; element</h3>
+    <ul>
+  	  <li><data value="20121">Long Cat</data></li>
+      <li><data value="20122">Grumpy Cat</data></li>
+      <li><data value="20123">Nyan Cat</data></li>
+    </ul>
 
-      <!-- data represents it's contents + machine readable form in "value" -->
-      <ul>
-    	  <li><data value="20121">Long Cat</data></li>
-        <li><data value="20122">Grumpy Cat</data></li>
-        <li><data value="20123">Nyan Cat</data></li>
-      </ul>
+    <hr>
 
-      <hr>
+    <!-- time represents it's contents + machine readable in the datetime attribute -->
+    <h3>Testing &lt;time&gt; element</h3>
+    <h1>The Day of a Cat</h1>
+    <ul>
+    	<li>Scratched the wall <time>2017-10-22T12:54</time></li>
+    	<li>Sat on the owner's face <time>2017-10-22T13:00</time></li>
+    	<li>Demanded wet food <time>2017-10-22T13:02</time></li>
+    	<li>Took a stroll arond town <time>2017-10-22T14:00</time></li>
+    	<li>Nappy nap nap nap <time>2017-10-22T15:00</time></li>
+    	<li>ZzZzzzzzZZZZzzzzzZ <time>2017-10-22T16:00</time></li>
+    	<li>I want my wet food, human <time>2017-10-22T18:00</time></li>
+    	<li>I SAID I WANT WET FOOD, YOU CAN OPENER <time>2017-10-22T18:01</time></li>
+    	<li>Napping on the human's lap <time>2017-10-22T18:47</time></li>
+    	<li>Napping on the human's laptop <time>2017-10-22T19:00</time></li>
+    	<li>MEOWWWWWWWWWW <time>2017-10-22T22:00</time></li>
+    	<li>scratchscratchscratchscratch <time>2017-10-22T23:35</time></li>
+    </ul>
 
-      <!-- time represents it's contents + machine readable in the datetime attribute -->
-      <h1>The Day of a Cat</h1>
-      <ul>
-      	<li>Scratched the wall <time>2017-10-22T12:54</time></li>
-      	<li>Sat on the owner's face <time>2017-10-22T13:00</time></li>
-      	<li>Demanded wet food <time>2017-10-22T13:02</time></li>
-      	<li>Took a stroll arond town <time>2017-10-22T14:00</time></li>
-      	<li>Nappy nap nap nap <time>2017-10-22T15:00</time></li>
-      	<li>ZzZzzzzzZZZZzzzzzZ <time>2017-10-22T16:00</time></li>
-      	<li>I want my wet food, human <time>2017-10-22T18:00</time></li>
-      	<li>I SAID I WANT WET FOOD, YOU CAN OPENER <time>2017-10-22T18:01</time></li>
-      	<li>Napping on the human's lap <time>2017-10-22T18:47</time></li>
-      	<li>Napping on the human's laptop <time>2017-10-22T19:00</time></li>
-      	<li>MEOWWWWWWWWWW <time>2017-10-22T22:00</time></li>
-      	<li>scratchscratchscratchscratch <time>2017-10-22T23:35</time></li>
-      </ul>
+    <hr>
 
-      <hr>
+    <!-- code reps a fragment of computer code, like XML element name, file, comp progm etc that a computer would recognize-->
+    <h3>Testing &lt;code&gt; element</h3>
+    <p>When you call the <code>activate()</code> method on the <code>cat</code> object, the eyes glow and the ears move.</p>
 
-      <!-- code reps a fragment of computer code, like XML element name, file, comp progm etc that a computer would recognize-->
-      <p>When you call the <code>activate()</code> method on the <code>cat</code> object, the eyes glow and the ears move.</p>
+    <hr>
 
-      <hr>
+    <!-- var reps a variable -->
+    <h3>Testing &lt;var&gt; element</h3>
+    <p>There are <var>n</var> cats in the alley. How many of them are cute? All of them, of course.</p>
 
-      <!-- var reps a variable -->
-      <p>There are <var>n</var> cats in the alley. How many of them are cute? All of them, of course.</p>
+    <hr>
 
-      <hr>
+    <!-- samp reps sample output from a program or a computing system -->
+    <h3>Testing &lt;samp&gt; element</h3>
+  	<p>The computer said <samp>Cat overload</samp>, but I can't  see how we can have too many cats</p>
 
-      <!-- samp reps sample output from a program or a computing system -->
-    	<p>The computer said <samp>Cat overload</samp>, but I can't  see how we can have too many cats</p>
+  	<hr>
 
-    	<hr>
+  	<!-- kbd is keyboard input or sometimes other input like voice commands -->
+    <h3>Testing &lt;kbd&gt; element</h3>
+  	<p>The cat happened to type <kbd>alt</kbd>+<kbd>f4</kbd> to shut down my code before saving it</p>
 
-    	<!-- kbd is keyboard input or sometimes other input like voice commands -->
-    	<p>The cat happened to type <kbd>alt</kbd>+<kbd>f4</kbd> to shut down my code before saving it</p>
+  	<hr>
 
-    	<hr>
+	  <!--sup is superscript, sub is subscript -->
+    <h3>Testing &lt;sup&gt; and &lt;sub&gt; element</h3>
+    <p>The current location of the cat is denoted by (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i</var></sub></var>) where <var>i</var> represents the point they are at </p>
 
-  	<!--sup is superscript, sub is subscript -->
-      <p>The current location of the cat is denoted by (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i</var></sub></var>) where <var>i</var> represents the point they are at </p>
+    <hr>
 
-      <hr>
+    <!-- i represents a span of text in an alternate voice or mood -->
+    <h3>Testing &lt;i&gt; element</h3>
+    <p>A cat named Missy was taking a nap.</p>
+    <p><i>I want my wet food</i>, Missy thought. However, her owner was nowhere to be found.</p>
 
-      <!-- i represents a span of text in an alternate voice or mood -->
-      <p>A cat named Missy was taking a nap.</p>
-      <p><i>I want my wet food</i>, Missy thought. However, her owner was nowhere to be found.</p>
+    <hr>
 
-      <hr>
+    <!-- b represents... it's bold for fucks sake -->
+    <h3>Testing &lt;b&gt; element</h3>
+    <p>The cat enters the owner's room. That <b>laptop</b> looks oh so warm. The <b>owner</b> flinches at the sight of the cat, coming closer as they anticipated what was about to happen.</p>
 
-      <!-- b represents... it's bold for fucks sake -->
-      <p>The cat enters the owner's room. That <b>laptop</b> looks oh so warm. The <b>owner</b> flinches at the sight of the cat, coming closer as they anticipated what was about to happen.</p>
+    <hr>
 
-      <hr>
+    <!-- u is for text with an unarticulated, though explicitely rendered non-textual annotation -->
+    <h3>Testing &lt;u&gt; element</h3>
+    <p>Cat people are called a faunus, not a <u>fonus</u></p>
 
-      <!-- u is for text with an unarticulated, though explicitely rendered non-textual annotation -->
-      <p>Cat people are called a faunus, not a <u>fonus</u></p>
+    <hr>
 
-      <hr>
+    <!-- mark reps a run of text in one doc marked or highlighted for ref purpose-->
+    <h3>Testing &lt;mark&gt; element</h3>
+    <p><mark>Cat</mark>s are such wonderful animals. <mark>Cat</mark>s are graceful, elegant, and cute at the same time. All <mark>cat</mark>s are beautiful no matter their shape, size or breed. All <mark>cat</mark>s deserve to have <mark>cat</mark> food.</p>
 
-      <!-- mark reps a run of text in one doc marked or highlighted for ref purpose-->
-      <p><mark>Cat</mark>s are such wonderful animals. <mark>Cat</mark>s are graceful, elegant, and cute at the same time. All <mark>cat</mark>s are beautiful no matter their shape, size or breed. All <mark>cat</mark>s deserve to have <mark>cat</mark> food.</p>
+    <hr>
 
-      <hr>
+    <!-- ruby allows one or morespans of phrasing to be marked with ruby annotations-->
+    <!-- Showing ruby, rb, rp, and rt all in the same example -->
+    <h3>Testing &lt;ruby&gt;, &lt;rb&gt;, &lt;rp&gt;, and &lt;rp&gt; element</h3>
+    <p><ruby>
+      <rtc lang=ja><rb>猫</rb>
+      <rp> (</rp>
+      <rt>ねこ</rt>
+      <rp>) </rp>
+      <rb>は</rb></rtc>
+    </ruby><p>
 
-      <!-- ruby allows one or morespans of phrasing to be marked with ruby annotations-->
-      <!-- Showing ruby, rb, rp, and rt all in the same example -->
-      <p><ruby>
-        <rtc lang=ja><rb>猫</rb>
-        <rp> (</rp>
-        <rt>ねこ</rt>
-        <rp>) </rp>
-        <rb>は</rb></rtc>
-      </ruby><p>
+    <p><ruby>
+      <rtc lang=ja><rb>最</rb></rtc>
+      <rp> (</rp>
+      <rtc lang=ja><rt>さい</rt></rtc>
+      <rp>) </rp>
+      <rtc lang=ja><rb>高</rb></rtc>
+      <rp> (</rp>
+      <rtc lang=ja><rt>こう</rt></rtc>
+      <rp>) </rp>
+      <rtc lang=ja><rb>です。</rb></rtc>
+    </ruby></p>
 
-      <p><ruby>
-        <rtc lang=ja><rb>最</rb></rtc>
-        <rp> (</rp>
-        <rtc lang=ja><rt>さい</rt></rtc>
-        <rp>) </rp>
-        <rtc lang=ja><rb>高</rb></rtc>
-        <rp> (</rp>
-        <rtc lang=ja><rt>こう</rt></rtc>
-        <rp>) </rp>
-        <rtc lang=ja><rb>です。</rb></rtc>
-      </ruby></p>
+    <p> means: </p>
 
-      <p> means: </p>
+    <p> Cats are the best. </p>
 
-      <p> Cats are the best. </p>
+    <hr>
 
-      <hr>
+    <!-- bdi is a span of text that is to be isolated for bidirectional formatting -->
+    <!-- the validator says "The bdi element is not supported in all browsers. Please be sure to test, and consider using a polyfill." . But it's a requirement that can't be replaced because it was one of the listings -->
+    <h3>Testing &lt;bdi&gt; element</h3>
+    <h1>Search Result Counts</h1>
+    <ul>
+      <li>Cat: <bdi>Long Cat</bdi>: 363,000,000  results
+      <li>Cat: <bdi>Grumpy Cat</bdi>: 13,600,000 results
+      <li>Cat: <bdi>Nyan Cat</bdi>: 1,400,000 results
+    </ul>
 
-      <!-- bdi is a span of text that is to be isolated for bidirectional formatting -->
-      <!-- the validator says "The bdi element is not supported in all browsers. Please be sure to test, and consider using a polyfill." . But it's a requirement that can't be replaced because it was one of the listings -->
-      <h1>Search Result Counts</h1>
-      <ul>
-        <li>Cat: <bdi>Long Cat</bdi>: 363,000,000  results
-        <li>Cat: <bdi>Grumpy Cat</bdi>: 13,600,000 results
-        <li>Cat: <bdi>Nyan Cat</bdi>: 1,400,000 results
-      </ul>
+    <hr>
 
-      <hr>
-
-      <!-- bdo isn't Black Desert Online. It can specify direction. -->
-      <p>This is how humans read sentences.</p>  
-      <p><bdo dir="rtl">This is how cats read sentences.</bdo></p>  
+    <!-- bdo isn't Black Desert Online. It can specify direction. -->
+    <h3>Testing &lt;bdo&gt; element</h3>
+    <p>This is how humans read sentences.</p>  
+    <p><bdo dir="rtl">This is how cats read sentences.</bdo></p>  
 
 
-      <hr>
+    <hr>
 
-      <!-- span -->
-      <p>The cat has <span style="color:blue">blue</span> eyes</p>
+    <!-- span -->
+    <h3>Testing &lt;span&gt; element</h3>
+    <p>The cat has <span style="color:blue">blue</span> eyes</p>
 
 
-      <hr>
+    <hr>
 
-      <!-- br -->
-      <p>This sentences is totally about cats.<br> This sentences is also about a cat.</p>
+    <!-- br -->
+    <h3>Testing &lt;br&gt; element</h3>
+    <p>This sentences is totally about cats.<br> This sentences is also about a cat.</p>
 
-      <hr>
+    <hr>
 
-      <!-- wbr -->
-      <p>Long cat cries are long words. So they need a break inbetween them:</p>
+    <!-- wbr -->
+    <h3>Testing &lt;wbr&gt; element</h3>
+    <p>Long cat cries are long words. So they need a break inbetween them:</p>
 
-      <p>The cat goes Meowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww<wbr>OOOOWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>
+    <p>The cat goes Meowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww<wbr>OOOOWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>
 
 
     </main>
+    <footer><a href="/hw2.html">Return to the top level page</a></footer>
   </body>
 </html>
