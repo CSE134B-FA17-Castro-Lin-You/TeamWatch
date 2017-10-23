@@ -1,0 +1,337 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Event Attributes Page</title>
+  <meta name="description" content="HW2 Main Page">
+  <meta name="author" content="Castro-Lin-You">
+</head>
+
+<body onload="myFunction()" onscroll="scrollFunction()">
+    
+        <h1>Event Attributes Page</h1>
+
+        <h3>onblur event test:</h3>
+         Enter Your Name: <input type="text" id="fname" onblur="blurThis()">
+
+        <p>When you leave the input field, a function is triggered which will change your name to a Mr.Whiskers.</p>
+
+        <script>
+        function blurThis() {
+            var x = document.getElementById("fname");
+            x.value = "Mr.Whiskers";
+        }
+        </script>
+
+
+
+        <h3>onchange event test:</h3>
+        <p>Select a type of cat from the list.</p>
+
+        <select id="mySelect" onchange="myFunction()">
+          <option value="British Shorthair">British Shorthair
+          <option value="Ragdoll">Ragdoll
+        </select>
+
+        <p>When you select a new type of cat, a function is triggered which outputs the value of the selected cat and an image of the cat.</p>
+        <img id="cat" src="https://i.pinimg.com/736x/b0/3d/f2/b03df220fc90ad9ec809ad80b6484a52.jpg" alt="Cat Outline" height="500" width="500">
+        <p id="demo"></p>
+
+        <script>
+        function myFunction() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+
+            if(x == "British Shorthair"){
+                document.getElementById("cat").src = "https://i.pinimg.com/736x/37/b5/c8/37b5c80f7078b9a94052a51185d389a5--british-accent-british-shorthair-kittens.jpg";   
+            }
+            if(x == "Ragdoll"){
+                 document.getElementById("cat").src = "https://vetstreet.brightspotcdn.com/dims4/default/d28cb58/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2Fa2%2F6c7a80a33411e087a80050568d634f%2Ffile%2FRagdoll-2-645mk062211.jpg"; 
+            }
+
+        }
+        </script>
+
+        <h3>onclick event test:</h3>
+        <p>Click the button to trigger a function that will change the image ABOVE to an image sphynx cat in a img element with id="cat".</p>
+
+        <button onclick="changeImage()">Click Me To Change Cat Picture</button>
+        <script>
+        function changeImage() {
+            document.getElementById("cat").src = "http://cdn1-www.cattime.com/assets/uploads/gallery/sphynx-cats-and-kittens/sphynx-cats-and-kittens-9.jpg";
+        }
+        </script>
+
+        <h3>ondclick event test:</h3>
+        <p ondblclick="doubleClick()">Double-click this paragraph see a new mage of another cat.</p>
+
+        <img id="thecat" src="https://i.pinimg.com/736x/b0/3d/f2/b03df220fc90ad9ec809ad80b6484a52.jpg" alt="Image of Cat Will Replace This Line" height="500" width="500">
+
+        <script>
+        function doubleClick() {
+             console.log(document.getElementById("thecat").src);
+             if(document.getElementById("thecat").src != "http://cdn1-www.cattime.com/assets/uploads/gallery/sphynx-cats-and-kittens/sphynx-cats-and-kittens-9.jpg"){
+                document.getElementById("thecat").src = "http://cdn1-www.cattime.com/assets/uploads/gallery/sphynx-cats-and-kittens/sphynx-cats-and-kittens-9.jpg";
+             }
+             else{
+                 document.getElementById("thecat").src = "https://i.pinimg.com/736x/b0/3d/f2/b03df220fc90ad9ec809ad80b6484a52.jpg";
+             }
+
+        }
+        </script>
+
+
+        <h3>onerr event test:</h3>
+        <div>
+        <img id="errorImage" src="https://ic90ad9ec809ad80b6484a52.jpg" alt="error image" onerror="errorFunction()">
+
+        <p>Error message will show up because the image that is being loaded doesn't exist.</p>
+
+        <script>
+            function errorFunction() {
+                alert('The image could not be loaded.');    
+            }
+        </script>
+        </div>
+
+
+        <h3>onfocus event test:</h3>
+        Phrase will appear here: <input type="text" onfocus="catsFunction(this)">
+
+        <p>When the input field gets focus, a function is triggered to add text to the empty field.</p>
+
+        <script>
+            function catsFunction(x) {
+                x.value = "Cats are friends";
+            }    
+        </script>
+
+
+        <h3>oninput event test:</h3>
+        <p>Write something in the text field to trigger a function.</p>
+
+        <input type="text" id="myInput" oninput="theFunction()">
+
+        <p id="welp"></p>
+
+        <script>
+            function theFunction() {
+                document.getElementById("welp").innerHTML = "The cat says: " + "MEOW ";
+            }
+        </script>
+
+
+         <h3>oninvalid event test:</h3>
+        <form >
+          What's Your Favorite Cat Name: <input type="text" oninvalid="alert('You must fill out the form!');" name="fname" required>
+          <input type="submit" value="Submit">
+        </form>
+
+        <p>If you click submit, without filling out the text field,
+        an alert message will occur.</p>
+
+
+         <h3>onkeydown event test:</h3>
+        <p>A function is triggered when the user is pressing down on a key while the cursor is in the input field.</p>
+
+        <input type="text" onkeydown="keyDownFunction()">
+
+        <script>
+            function keyDownFunction() {
+                alert("MEOOOOOOOOOOOOOOW");
+            }
+        </script>
+
+        <h3>onkeypress event test:</h3>
+        <p>A function is triggered when the user is pressing a key while the cursor is in the input field.</p>
+
+        <input type="text" onkeypress="keyPressFunction()">
+
+        <script>
+            function keyPressFunction() {
+                alert("MEOW");
+            }
+        </script>
+
+        <h3>onkeyup event test:</h3>
+        <p>A function is triggered when the user releases a key in the input field. The function changes the inputed text to "I AM CAT LORD!".</p>
+        Enter Anything: <input type="text" id="anything" onkeyup="upFunction()">
+
+        <script>
+        function upFunction() {
+            var x = document.getElementById("anything");
+            x.value = "I AM CAT LORD!";
+        }
+        </script>
+
+        <script>
+            function myFunction() {
+                alert("Page is loaded: Background Image Will Change To Something Cat Related");
+                 document.body.style.backgroundImage = "url(https://static.tumblr.com/363c39cb6eec063ba2e0707edaa18ca0/cmvoiw3/zsko4ml9f/tumblr_static_tumblr_static__640.jpg)";
+            }
+        </script>
+
+         <h3>onmousedown event test:</h3>
+         <img id="mousePic" src="http://www.petsworld.in/blog/wp-content/uploads/2014/09/adorable-cat.jpg" alt="Cute Kitten" height="500" width="500" onmousedown="mouseDown()" onmouseup="mouseUp()">
+
+        <script>
+            function mouseDown() {
+                document.getElementById("mousePic").src = "https://img.memecdn.com/scary-cat_o_1435335.jpg";
+            }
+
+            function mouseUp() {
+                document.getElementById("mousePic").src = "http://www.petsworld.in/blog/wp-content/uploads/2014/09/adorable-cat.jpg";
+            }
+        </script>
+
+
+        <h3>onmouseenter and onmouseleave event test:</h3>
+        <img id="mouseSmiley" src="https://i.pinimg.com/564x/2d/ff/24/2dff2492de1df814056aeb3ab83a2943.jpg" alt="Mouse Smiley" height="500" width="500" onmouseenter="bigImg(this)" onmouseleave="normalImg(this)">
+
+        <p>The function bigImg() is triggered when the user moves the mouse pointer onto the image.</p>
+        <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
+
+        <script>
+            function bigImg(x) {
+                x.style.height = "1000px";
+                x.style.width = "1000px";
+            }
+
+            function normalImg(x) {
+                x.style.height = "500px";
+                x.style.width = "500px";
+            }
+        </script>
+
+        <h3>onmousemove and onmouseout event test:</h3>
+         <img id="anotherCat" src="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="Mouse Smiley" height="250" width="250" onmousemove="welpFunction(event)" onmouseout="clearCoor()">
+
+        <p>Coordinates of image will show up base on where the user's mouse is on the image of the cat.</p>
+        <p id="coor"></p>
+        <script>
+            function welpFunction(e) {
+                var x = e.clientX;
+                var y = e.clientY;
+                var coor = "Coordinates: (" + x + "," + y + ")";
+                document.getElementById("coor").innerHTML = coor;
+            }
+
+            function clearCoor() {
+                document.getElementById("coor").innerHTML = "";
+            }
+        </script>
+
+        <h3>onmouseover event test:</h3>
+        <img id="anotherSmiley" src="https://i.pinimg.com/564x/2d/ff/24/2dff2492de1df814056aeb3ab83a2943.jpg" alt="Mouse Smiley" height="500" width="500" onmouseover="bigImgAgain(this)" onmouseleave="normalImgAgain(this)">
+
+        <p>The function bigImgAgain() is triggered when the user's mouse is over the image.</p>
+        <p>The function normalImgAgain() is triggered when the mouse pointer is moved out of the image.</p>
+
+        <script>
+            function bigImgAgain(x) {
+                x.style.height = "1000px";
+                x.style.width = "1000px";
+            }
+
+            function normalImgAgain(x) {
+                x.style.height = "500px";
+                x.style.width = "500px";
+            }
+        </script>
+
+        <h3>onmousewheel event test:</h3>
+        <p>Wheel over image to permanently englarge it</p>p>
+        <img id="myP" src="https://i.pinimg.com/736x/e2/8a/b6/e28ab6f657de9c397d31495e205c376f--happy-birthday-memes-cat-birthday.jpg" alt="Mouse Smiley" height="250" width="250" >
+    
+        <script>
+            function wheel() {
+                document.getElementById("myP").width = "500";
+                document.getElementById("myP").height = "500";
+            }
+        </script>
+
+         <h3>onreset event test:</h3>
+
+
+        <form id="myForm" onreset="resetFunction()">
+            What's Your Favorite Type Of Cat: <input type="text">
+            <input type="button" onclick="resetFunction()" value="Reset form">
+        </form>
+
+        <script>
+        function resetFunction(){
+           document.getElementById("myForm").reset();
+        }
+        </script>
+
+        <script>
+            function scrollFunction() {
+                document.body.style.backgroundImage = "";
+               
+            }
+        </script>
+    
+        <h3>onselect event test:</h3>
+        Story of a cat: <input type="text" value="Kitten is playing. " onselect="onSelectFunction()">
+
+        <p>The function myFunction() is triggered when some text is selected in the input field. The function shows a message.</p>
+
+        <script>
+            function onSelectFunction() {
+                alert("You have selected some text!");
+            }
+        </script>
+    
+    
+         <h3>onsubmit event test:</h3>
+        <h2>Order Your Cat Here</h2> 
+      <form onsubmit="submitFunction()">
+             <p><label>Customer name: <input required></label></p>
+             <p><label>Telephone: <input type=tel required></label></p>
+             <p><label>E-mail address: <input type=email required></label></p>
+         <fieldset>
+          <legend> Size of Cat</legend>
+              <p><label> <input type=radio name=size> Small </label></p>
+              <p><label> <input type=radio name=size> Medium </label></p>
+              <p><label> <input type=radio name=size> Large </label></p>
+
+          </fieldset>
+          <fieldset>
+          <legend> Energy Level Of Cat</legend>
+              <input type="range" name="a" list="a-values">
+                <datalist id="a-values">
+                 <option value="10" label="Small">
+                 <option value="90" label="Large">
+                </datalist>
+          </fieldset>
+         <fieldset>
+          <legend> Color of Cat </legend>
+              <p><label> <input type=checkbox> Black </label></p>
+              <p><label> <input type=checkbox> White </label></p>
+              <p><label> <input type=checkbox> Grey </label></p>
+              <p><label> <input type=checkbox> Rainbow </label></p>
+         </fieldset>
+
+          <!-- The datetime-local input type is not supported in all browsers. -->
+          <p><label>Comments: <textarea name="comments" maxlength=1000></textarea></label></p>
+           <p><button>Submit Order</button></p>
+     </form>  
+    
+    <script>
+        function submitFunction() {
+            alert("The form was submitted");
+        }
+    </script>
+
+     <footer>
+        <hr/>
+        <p>Validator: <a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fcse134b-castro-lin-you-hw2.firebaseapp.com%2FembeddedContent.html">Nu Html Checker</a></p>  
+        <p><a href="/hw2.html">Return to top level page</a></p>
+    </footer>
+    
+   
+    
+</body>
+</html>
