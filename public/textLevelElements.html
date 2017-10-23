@@ -20,13 +20,13 @@
     <hr>
 
 	  <!-- bold for strong importance-->
-    <h3>Testing &lt;em&gt; element</h3>
+    <h3>Testing &lt;strong&gt; element</h3>
     <p><strong>Cats</strong> are stronger than doggos</p>
 
     <hr>
 
 	  <!-- smaller font; side comments-->
-    <h3>Testing &lt;em&gt; element</h3>
+    <h3>Testing &lt;small&gt; element</h3>
     <p><small>smol cats are cute</small></p>
 
     <hr>
@@ -46,7 +46,7 @@
 
     <!-- reference to a creative work -->
     <h3>Testing &lt;cite&gt; element</h3>
-    <img src="http://78.media.tumblr.com/8b54aacd170570748fd86c96aeadeef8/tumblr_o943prqPZ01ri5e18o1_400.png" alt="gdi cat"><cite> --pistachiozombie
+    <img src="https://78.media.tumblr.com/8b54aacd170570748fd86c96aeadeef8/tumblr_o943prqPZ01ri5e18o1_400.png" alt="gdi cat"><cite> --pistachiozombie
     	<a href="http://pistachiozombie.tumblr.com/post/146248507561/thanks">October 22, 2016</a></cite>
 
     <hr>
@@ -150,31 +150,15 @@
     <hr>
 
     <!-- ruby allows one or morespans of phrasing to be marked with ruby annotations-->
-    <!-- Showing ruby, rb, rp, and rt all in the same example -->
-    <h3>Testing &lt;ruby&gt;, &lt;rb&gt;, &lt;rp&gt;, and &lt;rp&gt; element</h3>
-    <p><ruby>
-      <rtc lang=ja><rb>猫</rb>
-      <rp> (</rp>
-      <rt>ねこ</rt>
-      <rp>) </rp>
-      <rb>は</rb></rtc>
-    </ruby><p>
+    <!-- For some reason, the validator says it's okay, but the rtc tag doesn't work as it should. -->
+    <h3>Testing &lt;ruby&gt;, &lt;rt&gt; &lt;rtc&gt;and &lt;rp&gt; elements</h3>
+    
+    <ruby>最強<rp>（</rp><rt>さいきょう</rt><rp>）</rp>猫<rp>（</rp><rt>ねこ</rt><rp>）</rp><rtc>The Strongest Cat</rtc></ruby>
+    <p> means:"The strongest cat"</p>
 
-    <p><ruby>
-      <rtc lang=ja><rb>最</rb></rtc>
-      <rp> (</rp>
-      <rtc lang=ja><rt>さい</rt></rtc>
-      <rp>) </rp>
-      <rtc lang=ja><rb>高</rb></rtc>
-      <rp> (</rp>
-      <rtc lang=ja><rt>こう</rt></rtc>
-      <rp>) </rp>
-      <rtc lang=ja><rb>です。</rb></rtc>
-    </ruby></p>
+    <h3>Testing &lt;ruby&gt;, &lt;rt&gt; and &lt;rb&gt; elements</h3>
+    <ruby><rb>猫</rb><rt>ねこ</rt></ruby>
 
-    <p> means: </p>
-
-    <p> Cats are the best. </p>
 
     <hr>
 
@@ -219,7 +203,10 @@
 
 
     </main>
-    <footer><a href="/hw2.html">Return to the top level page</a></footer>
+    <footer>
+      <p>Validator: <a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fcse134b-castro-lin-you-hw2.firebaseapp.com%2FtextLevelElements.html">Nu Html Checker</a></p>
+      <a href="/hw2.html">Return to the top level page</a>
+    </footer>
 
   </body>
 </html>
