@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Testing Script Elements</title>
+  <meta name="description" content="A HTML document for testing script elements">
+  <meta name="author" content="Castro-Lin-You">
+
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Let's play Tic-Cat-Toe!</h1>
+  <p>Player 1 will use the <img id="tic-cat" src="http://lorempixel.com/200/200/cats/3" width="50" height="50" alt="tic-cat"> tile and Player 2 will use the <img id="toe-cat" src="http://lorempixel.com/200/200/cats/9" width="50" height="50" alt="toe-cat"> tile.</p>
+  <noscript>Tic-Cat-Toe requires JavaScript support to work. Please enable JavaScript in your browser to play Tic-Cat-Toe</noscript>
+
+  <table id="board" style="border-collapse: collapse; border: 1px solid black;">
+    <tr>
+      <td onclick="drawCat(0)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+      <td onclick="drawCat(1)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+      <td onclick="drawCat(2)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+    </tr>
+    <tr>
+      <td onclick="drawCat(3)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+      <td onclick="drawCat(4)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+      <td onclick="drawCat(5)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+    </tr>
+    <tr>
+      <td onclick="drawCat(6)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+      <td onclick="drawCat(7)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+      <td onclick="drawCat(8)"><canvas width="160" height="160">Your browser does not support the HTML5 canvas tag.</canvas></td>
+    </tr>
+  </table>
+  <table id="history">
+  </table>
+  <template id="rowTemplate">
+    <tr>
+      <td class="templateCell"></td>
+    </tr>
+  </template>
+  <hr>
+  <footer>
+    <script>
+      var gameWon = false;
+      var turn = 1;
+      var board = document.getElementById('board');
+      var gameHistory = document.getElementById('history');
+      var rowTemplate = document.getElementById('rowTemplate');
+      var cellState = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+      // gameState represents [top_row, middle_row, bottom_row, left_column, middle_column, right_column, bot_right_diag, top_right_diag]
+      var gameState = [0, 0, 0, 0, 0, 0, 0, 0];
+      
+      function drawCat(canvasNo) {
+        if (cellState[canvasNo] === 0 && !gameWon) {
+          var canvases = board.getElementsByTagName("canvas");
+          var canvas = canvases[canvasNo];
+          var context = canvas.getContext("2d");
+          if (turn === 1) {
+            var img = document.getElementById('tic-cat');
+          } else {
+            var img = document.getElementById('toe-cat');
+          }
+          context.drawImage(img,0,0);
+          recordMove(canvasNo);
+          updateHistory(canvasNo);
+        }
+      }
+
+      function recordMove(canvasNo) {
+        var rowNo = Math.floor(canvasNo/3);
+        var colNo = canvasNo % 3;
+
+        gameState[rowNo] += turn;
+        gameState[3+colNo] += turn;
+
+        if (rowNo === colNo)
+          gameState[6] += turn;
+
+        if (rowNo + colNo === 2)
+          gameState[7] += turn;
+        
+        cellState[canvasNo] = turn;
+      }
+
+      function updateHistory(canvasNo) {
+        var player = turn > 0 ? 1 : 2;
+        rowTemplate.content.querySelector('.templateCell').textContent = "Player " + player + " put a tile in cell " + canvasNo;
+        gameHistory.appendChild(rowTemplate.content.cloneNode(true));
+
+        if (gameState.indexOf(3) >= 0 || gameState.indexOf(-3) >= 0) {
+          rowTemplate.content.querySelector('.templateCell').textContent = "Player " + player + " wins!";
+          gameHistory.appendChild(rowTemplate.content.cloneNode(true));
+          gameWon = true;
+        } else if (cellState.indexOf(0) < 0) {
+          rowTemplate.content.querySelector('.templateCell').textContent = "It's a tie!";
+          gameHistory.appendChild(rowTemplate.content.cloneNode(true));
+        }
+
+        turn *= -1;
+      }
+    </script>
+
+    <p>Validator: <a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fcse134b-castro-lin-you-hw2.firebaseapp.com%2Fscript.html">Nu Html Checker</a></p>
+    <p><a href="/hw2.html">Return to top level page</a></p>
+  </footer>
+</body>
+</html>
