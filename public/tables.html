@@ -9,15 +9,18 @@
     <meta name="author" content="Catsro-Lin-You">
 
     <style>
-    table, th, td{
-      border: 5;
-      padding: 10;
-      border-spacing: 5;
+    table, td, th{
+      border: 2px solid #666;
+      padding: 10px;
+      border-spacing: 5px;
+      border-color: black;
     }
     </style>
   </head>
   <body>
     <main>
+
+      <h3>Testing &lt;caption&gt;, &lt;colgroup&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt; and &lt;td&gt;</h3>
       <table>
         <caption>Cat Meme Counter</caption>
         <colgroup>
@@ -33,24 +36,24 @@
         </thead>
         <tbody>
           <tr>
-            <td><img src="/images/tables/longcat.gif" alt="Long Cat Gif"></td>
+            <td><img src="/images/tables/longcat.gif" alt="Long Cat Gif" width="200" height="150"></td>
             <td>Long Cat</td>
             <td>7153</td>
           </tr>
           <tr>
-            <td><img src="/images/tables/grumpycat.gif" alt="Grumpy Cat Gif"></td>
+            <td><img src="/images/tables/grumpycat.gif" alt="Grumpy Cat Gif" width="200 height="150""></td>
             <td>Grumpy Cat</td>
             <td>6123</td>
           </tr>
           <tr>
-            <td><img src="/images/tables/nyancat.gif" alt="Nyan Cat Gif"></td>
+            <td><img src="/images/tables/nyancat.gif" alt="Nyan Cat Gif" width="200" height="150"></td>
             <td>Nyan Cat</td>
             <td>6090</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td></td>
+            <td><img src="/images/tables/cat.jpg" alt="Cat Pic" width="200" height="150"></td>
             <td>Total</td>
             <td>19,366</td>
           </tr>
@@ -58,23 +61,46 @@
       </table>
 
 
+      <hl>
 
+
+      <h3>Testing colspan</h3>
       <table>
         <caption>Cat Best Photo Winner</caption>
+        <colgroup>
+          <col span="3" style="background-color:#fcc7c7">
+          <col style="background-color:#c7cbfc">
+        </colgroup>
         <thead>
           <tr>
-            <th rowspan="3">Entries</th>
+            <th colspan="3">Entries</th>
             <th>Winner</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><img src="/images/tables/longcat.jpg" alt="Long Cat Pic"></td>
-            <td><img src="/images/tables/grumpycat.jpg" alt="Grumpy Cat Pic"></td>
-            <td><img src="/images/tables/nyancat.jpg" alt="Nyan Cat Pic"></td>
+            <td><img src="/images/tables/longcat.jpg" alt="Long Cat Pic" width="200" height="150"></td>
+            <td><img src="/images/tables/grumpycat2.jpg" alt="Grumpy Cat Pic" width="200" height="150"></td>
+            <td><img src="/images/tables/nyancat.jpg" alt="Nyan Cat Pic" width="200" height="150"></td>
             <td>Long Cat</td>
           </tr>
         </tbody>
+      </table>
+
+      <hl>
+
+      <h3>Testing rowspan</h3>
+
+      <table>
+        <tr>
+          <td><img src="/images/tables/col2.jpg" alt="Collague2" width="200" height="150"></td>
+          <td><img src="/images/tables/col3.jpg" alt="Collague3" width="200" height="150"></td>
+          <td rowspan="2"><img src="/images/tables/col1.jpg" alt="Colleague1" width="200" height="350"></td>
+        </tr>
+        <tr>
+          <td><img src="/images/tables/col4.jpg" alt="Collague4" width="200" height="150"></td>
+          <td><img src="/images/tables/col5.jpg" alt="Collague5" width="200" height="150"></td>
+        </tr>
       </table>
 
     </main>
