@@ -1,0 +1,230 @@
+/* Hint: use relative measurements you'll find them useful! */
+/* I may have removed a selector or two */
+
+/*
+ *
+ * Important! Please write comments to indicate your changes if you make edits outside of your section
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Monoton');  /* Set this for Monton a Google Font ...figure out their syntax */
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'apple_chancerychancery';
+    src: url('apple_chancery-webfont.woff2') format('woff2'),
+         url('apple_chancery-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    background-image: url("background.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+	border: 2rem solid transparent;
+    border-image: url("border.gif") 21 round;
+	background-color: white;
+    padding-top: 4rem;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+header {
+	width: 90%;
+	margin-left: auto;
+	margin-bottom: 4rem;
+}
+section {
+	/* color rgb(243,234,95) is used */
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    overflow:auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+section > div {
+    /* font is 'Comic Sans MS, text is automatically adjusted to lowercase do not mod the HTML */
+    font-family: 'Comic Sans MS';
+}
+
+section > div:nth-of-type(odd)  {
+	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+	background-color: rgb(192,77,249);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: " &#9829";
+    width: 80%;
+    height: 100px;
+    text-transform: lowercase;
+}
+section > div:nth-of-type(even) {
+	/* ANastNthChildSelectorToWrite means what it says it isn't an indetifier */
+    background-color:  rgb(43,209,252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100px;
+    width: 80%;
+    text-transform: lowercase;
+}
+section > div:nth-child(3):after {
+	/* gave you the nth child after selector for free to inspire you */
+	/* generated content in here ... a property can do that */
+    content: "\00a0\00a0\2665\2665\2665";
+}
+
+	/* some free rules for fun */
+aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    background: rgb(255,63,63);
+    color: white;
+    align-self: center;
+    border: 1rem solid black;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 1rem;
+    font-family: sans-serif;
+    
+    overflow: hidden;
+    text-align: center;
+}
+p{
+    font-size:100%;
+    padding: 0.5cm 1cm;
+}
+p > svg{
+    width:20px;
+    height: 20px;
+    fill:white;
+}
+/* Oh no! The file has been truncated I guess you have to fill it in */
+
+/* Solution given should
+   be below 250 lines, the solution we had was
+   below 200 easily formatted */
+
+/* Bryle's section */
+
+/* end */
+
+/* Harrison's section */
+a.logo {
+    font-family: 'Monoton', cursive;
+    text-decoration: none;
+    color: black;
+    font-size: 4rem;
+    background: rgb(255,80,200);
+    border-radius: 50%;
+	
+	display: inline-block;
+	padding: 1rem;
+	
+	box-shadow: 0 0.3rem 0.7rem #333333;
+}
+
+/* Bryle's section */
+div.fun {
+	font-family: courier;
+	font-size: 6rem;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: -2px 0 red, 0 2px red, 0 5px 0.5rem red, 2px 0 red, 0 -2px red;
+}
+
+span#kern1, span#kern3{
+	letter-spacing: -1.5rem;
+}
+/* end */
+
+/* Han's section */
+#zap{
+    align-self: center;
+    width:80%;
+    background-color: #f3e96a;
+    border-style: double;
+    border-radius: 5px;
+    border-width: 5px;
+}
+
+footer{
+    background-color: #fd4fc2;
+    text-align: center;
+    font-family: 'apple_chancerychancery';
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-weight: bold;
+}
+
+footer > div{
+    display: inline;
+    margin-left: 10%;
+}
+
+footer > div > img{
+    display: inline;
+    width: 35%;
+    align-self: center;
+    padding-left: 15px;
+}
+
+footer > div > img:hover + span{
+    opacity: 1;
+}
+
+footer > div > span {
+    position: relative;
+    width: 75px;
+    height: 50px;
+    text-align: center;
+    background-color: white;
+    border: 8px solid black;
+    padding: 8px;
+    border-radius: 10px;
+    vertical-align: top;
+    opacity: 0;
+}
+
+footer > div > span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border: 20px solid transparent;
+  border-right-color: black;
+  border-left: 0;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+    
+footer > span{
+  display: block;
+  font-size: 150%;
+  padding-top: 2%;
+}
+
+
+/* end */
