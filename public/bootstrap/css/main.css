@@ -1,5 +1,39 @@
+* {
+    color: #333333;
+}
+
+.bg-dark {
+    background-color: #013369 !important;
+}
+
+form {
+    background-color: #eeeeee;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #013369;
+    border-color: #013369;
+}
+
 /* Show it is fixed to the top */
 body.with-nav {
   min-height: 75rem;
   padding-top: 4.5rem;
+}
+
+img.logo{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* For width 768px and larger: */
+@media only screen and (min-width: 768px) {
+    img.logo { 
+        width: 65%;
+    }
 }
