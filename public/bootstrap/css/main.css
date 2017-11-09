@@ -31,9 +31,27 @@ img.logo{
     margin: auto;
 }
 
+/* Start Bryle's section */
+/* End Bryle's section */
+
+/* Start Han's section */
+/* End Han's section */
+
+/* Start Harrison's section */
+/* End Harrison's section */
+
 /* For width 768px and larger: */
 @media only screen and (min-width: 768px) {
     img.logo { 
         width: 65%;
     }
+    
+    /* Start Bryle's section */
+    /* End Bryle's section */
+
+    /* Start Han's section */
+    /* End Han's section */
+
+    /* Start Harrison's section */
+    /* End Harrison's section */
 }
