@@ -99,12 +99,6 @@ h3.edit-match-title{
   display: block;
 }
  
-
- .form-group{
-  display: inline-grid;
- }
-
-
  .add-player-btn-delete{
   background-color: #d70101; 
  }
