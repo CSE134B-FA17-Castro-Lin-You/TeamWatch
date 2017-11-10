@@ -58,6 +58,12 @@ span.light {
     background-color: #054d9d;
     border-color: #023f82;
 }
+
+.navbar-brand > img {
+  height: 2rem;
+  padding: 0rem;
+  width: auto;
+}
 /* End Harrison's section */
 
 /* For width 768px and larger: */
