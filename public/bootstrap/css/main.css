@@ -36,6 +36,40 @@ img.logo{
 /* End Bryle's section */
 
 /* Start Han's section */
+.player-padding{
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+
+
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    filter: alpha(opacity=0);
+    outline: none;
+    background-color: #013369;
+    cursor: inherit;
+    display: block;
+}
+
+#img-upload{
+    width: 100%;
+}
+
+.profile-img{
+  border-radius: 50%;
+  width: 50rem;
+}
+
 /* End Han's section */
 
 /* Start Harrison's section */
