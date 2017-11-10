@@ -147,6 +147,10 @@ span.light {
 .jumbotron.bg-gray {
   background-color: #eeeeee;
 }
+
+.centered {
+  text-align: center;
+}
 /* End Harrison's section */
 
 /* For width 768px and larger: */
@@ -172,6 +176,14 @@ span.light {
   
     .desktop-hidden {
         display: none;
+    }
+  
+    .reveal-on-hover {
+      display: none;
+    }
+
+    .show-on-hover:hover > h2 > .reveal-on-hover {
+      display: inline-block;
     }
     /* End Harrison's section for Large Screens */
 }
