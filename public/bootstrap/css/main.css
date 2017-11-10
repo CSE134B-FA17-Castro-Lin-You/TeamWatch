@@ -19,6 +19,7 @@ form {
     border-color: #013369;
 }
 
+
 /* Show it is fixed to the top */
 body.with-nav {
   min-height: 75rem;
@@ -37,3 +38,43 @@ img.logo{
         width: 65%;
     }
 }
+
+/*Bryle Code Here*/
+div#scheduleContainer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p.eventField{
+    margin: auto;
+}
+
+
+hr.scheduleHr{
+    width:100% ;
+}
+
+/* For width 768px and larger: */
+@media only screen and (min-width: 768px) {
+    hr.scheduleHr { 
+        width: 30% !important;
+    }
+}
+
+.btn-lg {
+    background-color: #013369;
+    border-color: #013369;
+    color:white;
+    width:50%;
+    margin:0.5em;
+}
+
+legend{
+    width: 100%;
+    text-align: center;
+}
+/*Bryle Code End*/
+
+
