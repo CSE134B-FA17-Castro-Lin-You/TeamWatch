@@ -25,19 +25,18 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars fa-lg light"></span>
       </button>
-      <a class="navbar-brand" href="teamstats.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
+      <a class="navbar-brand" href="view-game-schedule.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
       <a href="temp.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-user-plus fa-lg light"></span></a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="teamstats.html">Player Roster <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="teamstats.html">Team Stats <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Match Schedule</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upcoming Matches</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="matchstats.html">Match 1</a>
-              <a class="dropdown-item" href="matchstats.html">Match 2</a>
-              <a class="dropdown-item" href="matchstats.html">Match 3</a>
+              <a class="dropdown-item" href="matchstats.html">Today's Match</a>
+              <a class="dropdown-item" href="view-game-schedule.html">All Matches</a>
             </div>
           </li>
           <li class="nav-item">
@@ -55,78 +54,174 @@
       <!-- Page Heading -->
       <h1 class="my-4">
         Team Stats
-        <small>View/Add/Edit Players</small>
+        <small>for My Team</small>
       </h1>
+      
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Ties</th>
+            <th>Goals For</th>
+            <th>Goals Against</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>456</td>
+            <td>412</td>
+            <td>3</td>
+            <td>1234</td>
+            <td>1123</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2 class="my-4">
+        Player Roster
+      </h2>
       
       <p class="mobile-hidden light"><a href="temp.html" class="btn btn-primary" role="button">Add a New Player</a></p>
 
-      <!-- Project One -->
+      <!-- Player One -->
       <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        <div class="col-md-4">
+          <a href="temp.html">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/400x300" alt="Photo of Person McPerson">
           </a>
         </div>
-        <div class="col-md-5">
-          <h3>Player one</h3>
+        <div class="col-md-3">
+          <h3>Person McPerson</h3>
           <h4>Forward</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-          <a class="btn btn-primary" href="#">View Project</a>
+          <h5>Jersey #11</h5>
+        </div>
+        <div class="col-md-5">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Date of Birth</th>
+                <td>January 1, 1991</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Goals</th>
+                <td>111</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Appearances</th>
+                <td>11</td>
+              </tr>
+            </tbody>
+          </table>
+          <a class="btn btn-primary" href="temp.html">View Player Profile</a>
         </div>
       </div>
       <!-- /.row -->
 
       <hr>
 
-      <!-- Project Two -->
+      <!-- Player Two -->
       <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        <div class="col-md-4">
+          <a href="temp.html">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/400x300" alt="Photo of Dude Guy">
           </a>
         </div>
-        <div class="col-md-5">
-          <h3>Player two</h3>
+        <div class="col-md-3">
+          <h3>Dude Guy</h3>
           <h4>Striker</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-          <a class="btn btn-primary" href="#">View Project</a>
+          <h5>Jersey #22</h5>
+        </div>
+        <div class="col-md-5">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Date of Birth</th>
+                <td>February 2, 1992</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Goals</th>
+                <td>222</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Appearances</th>
+                <td>22</td>
+              </tr>
+            </tbody>
+          </table>
+          <a class="btn btn-primary" href="temp.html">View Player Profile</a>
         </div>
       </div>
       <!-- /.row -->
 
       <hr>
 
-      <!-- Project Three -->
+      <!-- Player Three -->
       <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        <div class="col-md-4">
+          <a href="temp.html">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/400x300" alt="Photo of Indy Vidual">
           </a>
         </div>
-        <div class="col-md-5">
-          <h3>Player three</h3>
+        <div class="col-md-3">
+          <h3>Indy Vidual</h3>
           <h4>Defensive Midfielder</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-          <a class="btn btn-primary" href="#">View Project</a>
+          <h5>Jersey #33</h5>
+        </div>
+        <div class="col-md-5">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Date of Birth</th>
+                <td>March 3, 1993</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Goals</th>
+                <td>33</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Appearances</th>
+                <td>33</td>
+              </tr>
+            </tbody>
+          </table>
+          <a class="btn btn-primary" href="temp.html">View Player Profile</a>
         </div>
       </div>
       <!-- /.row -->
 
       <hr>
 
-      <!-- Project Four -->
+      <!-- Player Four -->
       <div class="row">
-
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        <div class="col-md-4">
+          <a href="temp.html">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/400x300" alt="Photo of Hito Kata">
           </a>
         </div>
-        <div class="col-md-5">
-          <h3>Player four</h3>
+        <div class="col-md-3">
+          <h3>Hito Kata</h3>
           <h4>Goalkeeper</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-          <a class="btn btn-primary" href="#">View Project</a>
+          <h5>Jersey #44</h5>
+        </div>
+        <div class="col-md-5">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Date of Birth</th>
+                <td>April 4, 1994</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Goals</th>
+                <td>4</td>
+              </tr>
+              <tr>
+                <th scope="row">Career Appearances</th>
+                <td>44</td>
+              </tr>
+            </tbody>
+          </table>
+          <a class="btn btn-primary" href="temp.html">View Player Profile</a>
         </div>
       </div>
       <!-- /.row -->
@@ -141,7 +236,7 @@
             <span class="sr-only">Previous</span>
           </a>
         </li>
-        <li class="page-item">
+        <li class="page-item active">
           <a class="page-link" href="#">1</a>
         </li>
         <li class="page-item">
