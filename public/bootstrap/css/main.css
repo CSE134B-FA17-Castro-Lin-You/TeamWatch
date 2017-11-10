@@ -23,7 +23,7 @@ form {
 /* Show it is fixed to the top */
 body.with-nav {
   min-height: 75rem;
-  padding-top: 4.5rem;
+  padding-top: 3.5rem;
 }
 
 img.logo{
@@ -32,14 +32,50 @@ img.logo{
     margin: auto;
 }
 
+/* Start Bryle's section */
+/* End Bryle's section */
+
+/* Start Han's section */
+/* End Han's section */
+
+/* Start Harrison's section */
+.mobile-hidden {
+    display: none;
+}
+
+.desktop-hidden {
+    display: inline-block;
+}
+
+span.light {
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.btn:hover {
+    background-color: #054d9d;
+    border-color: #023f82;
+}
+
+.navbar-brand > img {
+  height: 2rem;
+  padding: 0rem;
+  width: auto;
+}
+/* End Harrison's section */
+
 /* For width 768px and larger: */
 @media only screen and (min-width: 768px) {
     img.logo { 
         width: 65%;
     }
+
 }
 
-/*Bryle Code Here*/
+    /* Start Bryle's section */
 div#scheduleContainer{
     display: flex;
     text-align: center;
@@ -71,10 +107,26 @@ hr.scheduleHr{
     margin:0.5em;
 }
 
-legend{
+h3.edit-match-title{
     width: 100%;
     text-align: center;
 }
-/*Bryle Code End*/
 
+
+    
+    
+    /* End Bryle's section */
+
+    /* Start Han's section */
+    /* End Han's section */
+
+    /* Start Harrison's section */
+  .mobile-hidden {
+      display: inline-block;
+  }
+  
+  .desktop-hidden {
+      display: none;
+  }
+    /* End Harrison's section */
 

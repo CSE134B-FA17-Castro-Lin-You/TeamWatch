@@ -85,27 +85,27 @@
             <main role="main" class="container mt-3 mt-md-5">
                 <div class="row justify-content-center">
                     <form class="jumbotron col-md-6 col-sm-12 mt-3 mt-md-5 ">
-                      <legend>Edit Match</legend>
+                      <h2 class="edit-match-title">Edit Match</h2>
                       <div class="form-group">
                         <label for="opponentteam">Opponent Team</label>
-                        <input type="text" class="form-control"  placeholder="Opponent Team">
+                        <input type="text" class="form-control" id="opponentteam"  placeholder="Opponent Team">
                       </div>
                       <div class="form-group">
                         <label for="location">Location</label>
-                        <input type="text" class="form-control" placeholder="Location">
+                        <input type="text" class="form-control" id="location" placeholder="Location">
                       </div>
                        <div>
                       <br/>
                         <div class="form-group">
-                            <label for="location">Date/Time</label>
+                            <label for="dateandtime">Date/Time</label>
                             <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" placeholder="2017-11-25"/>
+                                <input type='text' class="form-control" placeholder="2017-11-25" id="dateandtime"/>
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                                     </span>
                             </div>
                         </div>
                         <div class="form-group">
-                             <label for="Status">Status</label>
+                             <label>Status</label>
                             <div class="radio">
                                 <label><input type="radio" name="optradio">Home</label>
                             </div>
