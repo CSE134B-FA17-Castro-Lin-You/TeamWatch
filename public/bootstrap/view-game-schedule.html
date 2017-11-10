@@ -23,23 +23,23 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars fa-lg light"></span>
           </button>
-          <a class="navbar-brand" href="teamstats.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
-          <a href="temp.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-user-plus fa-lg light"></span></a>
+          <a class="navbar-brand" href="view-game-schedule.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
+          <!-- desktop-hidden navbar button -->
+          <a href="add-game.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-calendar-plus-o fa-lg light"></span></a>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="teamstats.html">Player Roster <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="teamstats.html">Team Stats</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Match Schedule</a>
+              <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upcoming Matches</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="matchstats.html">Match 1</a>
-                  <a class="dropdown-item" href="matchstats.html">Match 2</a>
-                  <a class="dropdown-item" href="matchstats.html">Match 3</a>
+                  <a class="dropdown-item" href="matchstats.html">Today's Match</a>
+                  <a class="dropdown-item" href="view-game-schedule.html">All Matches <span class="sr-only">(current)</span></a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="temp.html">Record Match Stats</a>
+                <a class="nav-link" href="record-match-stats.html">Record Match Stats</a>
               </li>
               <li class="nav-item desktop-hidden">
                 <a class="nav-link" href="login.html">Log Out</a>
@@ -51,42 +51,43 @@
 
         <div class="container">
             <div id="scheduleContainer" class="jumbotron col-xs-1">
-                <div>
-                    <article>
-                      <h2>Previous Game</h2>
-                      <p class=eventField>10/14 Sun at 5:00pm</p>
-                      <p class=eventField>San Diego Petco Park</p>
-                      <p class=eventField>My Team vs Opponent</p>
-                      <p class=eventField>1:1</p>
-                      <p class=eventField>Home Game</p>
-                      <hr class="scheduleHr">
-                    </article>
-                </div>
+                <h1>Match Schedule</h1>
+                <!-- mobile-hidden add/edit button -->
+                <p><a class="btn btn-primary mobile-hidden" href="add-game.html">Add New Game</a></p>
 
-                 <div >
-                    <article>
-                      <h2 class=eventField>Today's Game</h2>
-                      <p class=eventField>10/15 Mon at 5:00pm</p>
-                      <p class=eventField>San Diego Petco Park</p>
-                      <p class=eventField>My Team vs Opponent</p>
-                      <p class=eventField>Home Game</p>
-                      <hr class="scheduleHr">
-                    </article>
-                </div>
+                <article>
+                  <h2>Previous Game</h2>
+                  <p class=eventField>10/14 Sun at 5:00pm</p>
+                  <p class=eventField>San Diego Petco Park</p>
+                  <p class=eventField>My Team vs Opponent</p>
+                  <p class=eventField>1:1</p>
+                  <p class=eventField>Home Game</p>
+                  <a class="btn btn-primary disabled" href="matchstats.html">View Match Stats</a>
+                  <hr class="scheduleHr">
+                </article>
 
-                <div >
-                  <article>
-                      <h2 class=eventField>Upcoming Game</h2>
-                      <p class=eventField>10/16 Tue at 5:00pm</p>
-                      <p class=eventField>San Diego Petco Park</p>
-                      <p class=eventField>My Team vs Opponent</p>
-                      <p class=eventField>Home Game</p>
-                    </article>
-                </div>
+                <article>
+                  <h2 class=eventField>Today's Game</h2>
+                  <p class=eventField>10/15 Mon at 5:00pm</p>
+                  <p class=eventField>San Diego Petco Park</p>
+                  <p class=eventField>My Team vs Opponent</p>
+                  <p class=eventField>Home Game</p>
+                  <a class="btn btn-primary" href="matchstats.html">View Match Stats</a>
+                  <hr class="scheduleHr">
+                </article>
+
+                <article>
+                  <h2 class=eventField>Upcoming Game</h2>
+                  <p class=eventField>10/16 Tue at 5:00pm</p>
+                  <p class=eventField>San Diego Petco Park</p>
+                  <p class=eventField>My Team vs Opponent</p>
+                  <p class=eventField>Home Game</p>
+                  <a class="btn btn-primary disabled" href="matchstats.html">View Match Stats</a>
+                </article>
             </div>
         </div>  
         
-         <!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
