@@ -17,8 +17,6 @@
 
         <!-- Custom styles for this template -->
         <link href="css/main.css" rel="stylesheet">  
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -27,64 +25,93 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
 
-        <script>
-         $(function () {
-           var bindDatePicker = function() {
-                $(".date").datetimepicker({
-                format:'DD-MM-YYYY HH-mm',
-                    icons: {
-                        time: "fa fa-clock-o",
-                        date: "fa fa-calendar",
-                        up: "fa fa-arrow-up",
-                        down: "fa fa-arrow-down"
-                    }
-                }).find('input:first').on("blur",function () {
-                    // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
-                    // update the format if it's yyyy-mm-dd
-                    var date = parseDate($(this).val());
 
-                    if (! isValidDate(date)) {
-                        //create date based on momentjs (we have that)
-                        date = moment().format('DD-MM-YYYY HH-mm');
-                    }
-
-                    $(this).val(date);
-                });
-            }
-
-           var isValidDate = function(value, format) {
-                format = format || false;
-                // lets parse the date to the best of our knowledge
-                if (format) {
-                    value = parseDate(value);
-                }
-
-                var timestamp = Date.parse(value);
-
-                return isNaN(timestamp) == false;
-           }
-
-           var parseDate = function(value) {
-                var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
-                if (m)
-                    value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
-                    var h = d.getHours();
-                h = (h < 10) ? ("0" + h) : h ;
-
-                var m = d.getMinutes();
-                m = (m < 10) ? ("0" + m) : m ;
-
-                return value;
-           }
-
-           bindDatePicker();
-         });
-    </script>       
+    <script>
+ $(function () {
+   var bindDatePicker = function() {
+		$(".date").datetimepicker({
+        format:'DD-MM-YYYY HH-mm',
+			icons: {
+				time: "fa fa-clock-o",
+				date: "fa fa-calendar",
+				up: "fa fa-arrow-up",
+				down: "fa fa-arrow-down"
+			}
+		}).find('input:first').on("blur",function () {
+			// check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+			// update the format if it's yyyy-mm-dd
+			var date = parseDate($(this).val());
+ 
+			if (! isValidDate(date)) {
+				//create date based on momentjs (we have that)
+				date = moment().format('DD-MM-YYYY HH-mm');
+			}
+ 
+			$(this).val(date);
+		});
+	}
+ 
+   var isValidDate = function(value, format) {
+		format = format || false;
+		// lets parse the date to the best of our knowledge
+		if (format) {
+			value = parseDate(value);
+		}
+ 
+		var timestamp = Date.parse(value);
+ 
+		return isNaN(timestamp) == false;
+   }
+ 
+   var parseDate = function(value) {
+		var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+		if (m)
+			value = m[5] + '-' + ("00" + m[3]).slice(-2) + '-' + ("00" + m[1]).slice(-2);
+			var h = d.getHours();
+        h = (h < 10) ? ("0" + h) : h ;
+ 
+        var m = d.getMinutes();
+        m = (m < 10) ? ("0" + m) : m ;
+ 
+		return value;
+   }
+ 
+   bindDatePicker();
+ });
+ </script>     
     </head>
-    <body>
-            <main role="main" class="container mt-3 mt-md-5">
+    <body class="with-nav">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars fa-lg light"></span>
+          </button>
+          <a class="navbar-brand" href="teamstats.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
+          <a href="temp.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-user-plus fa-lg light"></span></a>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="teamstats.html">Player Roster <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Match Schedule</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="matchstats.html">Match 1</a>
+                  <a class="dropdown-item" href="matchstats.html">Match 2</a>
+                  <a class="dropdown-item" href="matchstats.html">Match 3</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="temp.html">Record Match Stats</a>
+              </li>
+              <li class="nav-item desktop-hidden">
+                <a class="nav-link" href="login.html">Log Out</a>
+              </li>
+            </ul>
+            <span class="mobile-hidden light"><a href="login.html" class="btn btn-primary" role="button">Log Out</a></span>
+          </div>
+        </nav>
                 <div class="row justify-content-center">
-                    <form class="jumbotron col-md-6 col-sm-12 mt-3 mt-md-5 ">
+                    <form class="jumbotron col-md-6 col-sm-12 mt-3 mt-md-1 ">
                       <h2 class="edit-match-title">Edit Match</h2>
                       <div class="form-group">
                         <label for="opponentteam">Opponent Team</label>
@@ -118,6 +145,13 @@
                       <button type="submit" class="btn btn-lg center-block">Delete</button>
                     </form>
                 </div>
-            </main>
+        
+         <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
