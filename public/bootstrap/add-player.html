@@ -31,38 +31,31 @@
 <!-- for the picture input button -->
 <script type="text/javascript">
   $(document).ready( function() {
-      $(document).on('change', '.btn-file :file', function() {
-    var input = $(this),
+    $(document).on('change', '.btn-file :file', function() {
+      var input = $(this),
       label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-    input.trigger('fileselect', [label]);
+      input.trigger('fileselect', [label]);
     });
 
     $('.btn-file :file').on('fileselect', function(event, label) {
-        
-        var input = $(this).parents('.input-group').find(':text'),
-            log = label;
-        
-        if( input.length ) {
-            input.val(log);
-        } else {
-            if( log ) alert(log);
-        }
-      
+      var input = $(this).parents('.input-group').find(':text'),
+      log = label;
     });
+
     function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
             
-            reader.onload = function (e) {
-                $('#img-upload').attr('src', e.target.result);
-            }
-            
-            reader.readAsDataURL(input.files[0]);
+        reader.onload = function (e) {
+          $('#img-upload').attr('src', e.target.result);
         }
+            
+        reader.readAsDataURL(input.files[0]);
+      }
     }
 
     $("#imgInp").change(function(){
-        readURL(this);
+      readURL(this);
     });   
   });
 </script>
@@ -75,23 +68,23 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars fa-lg light"></span>
       </button>
-      <a class="navbar-brand" href="teamstats.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
-      <a href="temp.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-user-plus fa-lg light"></span></a>
+      <a class="navbar-brand" href="view-game-schedule.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
+      <!-- desktop-hidden navbar button -->
+      <a href="view-game-schedule.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-times fa-lg light"></span></a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="teamstats.html">Player Roster <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="teamstats.html">Team Stats</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Match Schedule</a>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upcoming Matches</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="matchstats.html">Match 1</a>
-              <a class="dropdown-item" href="matchstats.html">Match 2</a>
-              <a class="dropdown-item" href="matchstats.html">Match 3</a>
+              <a class="dropdown-item" href="matchstats.html">Today's Match</a>
+              <a class="dropdown-item" href="view-game-schedule.html">All Matches</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="temp.html">Record Match Stats</a>
+            <a class="nav-link" href="record-match-stats.html">Record Match Stats</a>
           </li>
           <li class="nav-item desktop-hidden">
             <a class="nav-link" href="login.html">Log Out</a>
@@ -100,65 +93,109 @@
         <span class="mobile-hidden light"><a href="login.html" class="btn btn-primary" role="button">Log Out</a></span>
       </div>
     </nav>
+
     <main role="main" class="container mt-3 mt-md-1">
       <div class="row justify-content-center">
 
-        <form class="jumbotron col-md-6 col-sm-12 mt-3 mt-md-5">
+        <form class="jumbotron col-md-6 col-sm-12 mt-3 mt-md-5 bg-gray">
+          <legend class="edit-match-title">Add A New Player</legend>
 
 
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-horizontal">
+                <img id='img-upload' class="profile-img"/>
+              </div>
+            </div>
 
-
-    <div class="form-group">
-        <label>Profile Picture</label>
-
-            <span class="input-group-btn">
-                <span class="btn btn-default btn-file">
-                    Select <input type="file" id="imgInp">
+            <div class="col-sm-6">
+              <div class="form-horizontal">
+                <span class="input-group-btn">
+                  <span class="btn btn-default btn-file">
+                      Select Picture <input type="file" id="imgInp">
+                  </span>
                 </span>
-            </span>
-        <img id='img-upload' class="profile-img" />
-
-    </div>
-
+              </div>
+            </div>
+          </div>
 
 
-          <div class="form-group">
-            <table>
-              <tr>
-                <td><label for="addPlayerFName">First Name:</label></td>
-                <td><input type="text" class="form-control" id="addPlayerFName" placeholder="First name"></td>
-              </tr>
+          <div class="row">
+            <div class="col-sm-4">
+              <label for="addPlayerFName">First Name:</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="addPlayerFName" placeholder="First name">
+            </div>
+          </div>
 
-              <tr>
-                <td><label for="addPlayerLName">Last Name:</label></td>
-                <td><input type="text" class="form-control" id="addPlayerLName" placeholder="Last name"></td>
-              </tr>
+           <div class="row">
+            <div class="col-sm-4">
+              <label for="addPlayerLName">Last Name:</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="addPlayerLName" placeholder="Last name">
+            </div>
+          </div>
 
-              <tr>
-                <td><label for="addPlayerEmail">Email:</label></td>
-                 <td><input type="email" class="form-control" id="addPlayerEmail" placeholder="Email"></td>
-              </tr>
+          <div class="row">
+            <div class="col-sm-4">
+              <label for="addPlayerEmail">Email:</label><br/>
+            </div>
+            <div class="col-sm-6">
+              <input type="email" class="form-control" id="addPlayerEmail" placeholder="Email">
+            </div>
+          </div>
 
-              <tr>
-                <td><label for="addPlayerDOB">Date of Birth:</label></td>
-                <td><input type="date" class="form-control" id="addPlayerDOB" placeholder="Date of Birth"></td>
-              </tr>
+          <div class="row">
+            <div class="col-sm-4">
+              <label for="addPlayerDOB">D.O.B:</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="date" class="form-control" id="addPlayerDOB" placeholder="Date of Birth">
+            </div>
+          </div>
 
-              <tr>
-                <td><label for="addPlayerJersey">Jersey Number:</label></td>
-                <td><input type="number" class="form-control" id="addPlayerJersey" placeholder="Jersy Number"></td>
-              </tr>
+          <div class="row">
+            <div class="col-sm-4">
+              <label for="addPlayerJersey">Jersey #:</label>
+            </div>
+            <div class="col-sm-6">
+              <input type="number" class="form-control" id="addPlayerJersey" placeholder="Jersy Number">
+            </div>
+          </div>
 
-            </table>
-        </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <label for="addPlayerPosition">Position:</label>
+            </div>
+            <div class="col-sm-6">
+              <select class="form-control" id="addPlayerPosition">
+                <option>Forward</option>
+                <option>Striker</option>
+                <option>Defensive midfielder</option>
+                <option>Left midfielder</option>
+                <option>Right midfielder</option>
+                <option>Left back</option>
+                <option>Right back</option>
+                <option>Sweeper</option>
+                <option>Stopper</option>
+                <option>Goalkeeper</option>
+              </select>
+            </div>
+          </div>
+
+
 
           <div class="form-check">
-            <label class="form-check-label">Captain:
-              <input type="checkbox" class="form-check-input">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">Captain
             </label>
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
+
+
         </form>
 
 
