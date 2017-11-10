@@ -58,20 +58,20 @@
       
       <form class="jumbotron bg-gray" action="view-game-schedule.html">
         <div class="form-group row">
-          <label for="datetime-input" class="col-2 col-form-label">Time</label>
-          <div class="col-10">
+          <label for="datetime-input" class="col-3 col-form-label">Time</label>
+          <div class="col-9">
             <input class="form-control" type="datetime-local" value="1970-12-31T00:00:00" id="datetime-input">
           </div>
         </div>
         <div class="form-group row">
-          <label for="location-input" class="col-2 col-form-label">Location</label>
-          <div class="col-10">
+          <label for="location-input" class="col-3 col-form-label">Location</label>
+          <div class="col-9">
             <input class="form-control" type="text" placeholder="e.g. San Diego Petco Park" id="location-input">
           </div>
         </div>
         <div class="form-group row">
-          <label for="gametype-input" class="col-2 col-form-label">Game Type</label>
-          <div class="col-10">
+          <label for="gametype-input" class="col-3 col-form-label">Game Type</label>
+          <div class="col-9">
             <select class="form-control" id="gametype-input">
               <option selected disabled hidden>Select Game Type</option>
               <option>Home Game</option>
@@ -90,43 +90,43 @@
           <tbody>
             <tr>
               <th scope="row">Foul</th>
-              <td><input class="form-control" type="number" id="my-foul"></td>
-              <td><input class="form-control" type="number" id="their-foul"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="my-foul"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="their-foul"></td>
             </tr>
             <tr>
               <th scope="row">Red Card</th>
-              <td><input class="form-control" type="number" id="my-red-card"></td>
-              <td><input class="form-control" type="number" id="their-red-card"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="my-red-card"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="their-red-card"></td>
             </tr>
             <tr>
               <th scope="row">Yellow Card</th>
-              <td><input class="form-control" type="number" id="my-yellow-card"></td>
-              <td><input class="form-control" type="number" id="their-yellow-card"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="my-yellow-card"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="their-yellow-card"></td>
             </tr>
             <tr>
               <th scope="row">Shot on Goal</th>
-              <td><input class="form-control" type="number" id="my-shot-on-goal"></td>
-              <td><input class="form-control" type="number" id="their-shot-on-goal"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="my-shot-on-goal"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="their-shot-on-goal"></td>
             </tr>
             <tr>
               <th scope="row">Goal</th>
-              <td><input class="form-control" type="number" id="my-goal"></td>
-              <td><input class="form-control" type="number" id="their-goal"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="my-goal"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="their-goal"></td>
             </tr>
             <tr>
               <th scope="row">Corner Kick</th>
-              <td><input class="form-control" type="number" id="my-corner-kick"></td>
-              <td><input class="form-control" type="number" id="their-corner-kick"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="my-corner-kick"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="their-corner-kick"></td>
             </tr>
             <tr>
               <th scope="row">Goal Kick</th>
-              <td><input class="form-control" type="number" id="my-goal-kick"></td>
-              <td><input class="form-control" type="number" id="their-goal-kick"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="my-goal-kick"></td>
+              <td><input class="form-control" type="number" placeholder="0" id="their-goal-kick"></td>
             </tr>
             <tr>
               <th scope="row">Possession Time</th>
-              <td><input class="form-control" type="text" placeholder="HH:MM:SS" id="my-corner-kick"></td>
-              <td><input class="form-control" type="text" placeholder="HH:MM:SS" id="their-corner-kick"></td>
+              <td><input class="form-control" type="text" placeholder="HH:MM:SS" value="00:00:00" id="my-corner-kick"></td>
+              <td><input class="form-control" type="text" placeholder="HH:MM:SS" value="00:00:00" id="their-corner-kick"></td>
             </tr>
           </tbody>
         </table>

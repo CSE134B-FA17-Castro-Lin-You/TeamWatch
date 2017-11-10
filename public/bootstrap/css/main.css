@@ -98,16 +98,10 @@ h3.edit-match-title{
   content: url("../images/d-profile.png");
   display: block;
 }
- 
 
- .form-group{
-  display: inline-grid;
- }
-
-
- .add-player-btn-delete{
+.add-player-btn-delete{
   background-color: #d70101; 
- }
+}
 
 /* End Han's section */
 
