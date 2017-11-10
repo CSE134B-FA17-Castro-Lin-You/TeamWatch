@@ -104,6 +104,11 @@ h3.edit-match-title{
   display: inline-grid;
  }
 
+
+ .add-player-btn-delete{
+  background-color: #d70101; 
+ }
+
 /* End Han's section */
 
 /* Start Harrison's section */
@@ -157,6 +162,7 @@ span.light {
     /* End Bryle's section for Large Screens */
 
     /* Start Han's section for Large Screens */
+
     /* End Han's section for Large Screens */
 
     /* Start Harrison's section for Large Screens */
