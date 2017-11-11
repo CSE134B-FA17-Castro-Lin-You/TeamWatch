@@ -126,7 +126,7 @@ span.light {
     border: none;
 }
 
-.btn:hover {
+.btn-primary:hover {
     background-color: #054d9d;
     border-color: #023f82;
 }
