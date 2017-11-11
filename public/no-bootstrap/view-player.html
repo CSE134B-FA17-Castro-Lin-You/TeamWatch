@@ -1,82 +1,42 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- TODO meta
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    -->
+    <meta name="description" content="A roster and statistics management tool for soccer organizations.">
+    <meta name="author" content="Castro-Lin-You">
+    <link rel="icon" href="favicon.ico">
 
     <title>TeamWatch</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/game-schedule-module.css" rel="stylesheet">
-
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
     <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
- 
-
-
-<!-- for the picture input button -->
-<script type="text/javascript">
-  $(document).ready( function() {
-    $(document).on('change', '.btn-file :file', function() {
-      var input = $(this),
-      label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-      input.trigger('fileselect', [label]);
-    });
-
-    $('.btn-file :file').on('fileselect', function(event, label) {
-      var input = $(this).parents('.input-group').find(':text'),
-      log = label;
-    });
-
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-            
-        reader.onload = function (e) {
-          $('#img-upload').attr('src', e.target.result);
-        }
-            
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
-
-    $("#imgInp").change(function(){
-      readURL(this);
-    });   
-  });
-</script>
-
-
-
+    <link href="css/main.css" rel="stylesheet">
   </head>
+
   <body class="with-nav">
+
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars fa-lg light"></span>
       </button>
+
       <a class="navbar-brand" href="view-game-schedule.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
+
       <!-- desktop-hidden navbar button -->
-      <a href="view-game-schedule.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-times fa-lg light"></span></a>
+      <a href="edit-player.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-pencil fa-lg light"></span></a>
+
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="teamstats.html">Team Stats</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="teamstats.html">Team Stats <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item dropdown active">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upcoming Matches</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="matchstats.html">Today's Match</a>
@@ -94,117 +54,109 @@
       </div>
     </nav>
 
-    <main role="main" class="container mt-3 mt-md-1">
-      <div class="row justify-content-center">
-
-        <form class="jumbotron col-md-6 col-sm-12 mt-3 mt-md-5 bg-gray">
-          <legend class="edit-match-title">Add A New Player</legend>
 
 
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="form-horizontal">
-                <img id='img-upload' class="profile-img"/>
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="form-horizontal">
-                <span class="input-group-btn">
-                  <span class="btn btn-default btn-file">
-                      Select Picture <input type="file" id="imgInp">
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <div class="col-sm-4">
-              <label for="addPlayerFName">First Name:</label>
-            </div>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" id="addPlayerFName" placeholder="First name">
-            </div>
-          </div>
-
-           <div class="row">
-            <div class="col-sm-4">
-              <label for="addPlayerLName">Last Name:</label>
-            </div>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" id="addPlayerLName" placeholder="Last name">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <label for="addPlayerEmail">Email:</label><br/>
-            </div>
-            <div class="col-sm-6">
-              <input type="email" class="form-control" id="addPlayerEmail" placeholder="Email">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <label for="addPlayerDOB">D.O.B:</label>
-            </div>
-            <div class="col-sm-6">
-              <input type="date" class="form-control" id="addPlayerDOB" placeholder="Date of Birth">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <label for="addPlayerJersey">Jersey #:</label>
-            </div>
-            <div class="col-sm-6">
-              <input type="number" class="form-control" id="addPlayerJersey" placeholder="Jersy Number">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <label for="addPlayerPosition">Position:</label>
-            </div>
-            <div class="col-sm-6">
-              <select class="form-control" id="addPlayerPosition">
-                <option>Forward</option>
-                <option>Striker</option>
-                <option>Defensive midfielder</option>
-                <option>Left midfielder</option>
-                <option>Right midfielder</option>
-                <option>Left back</option>
-                <option>Right back</option>
-                <option>Sweeper</option>
-                <option>Stopper</option>
-                <option>Goalkeeper</option>
-              </select>
-            </div>
-          </div>
-
-
-
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input">Captain
-            </label>
-          </div>
-
-          
-        </form>
-
-
-      </div>
-    </main>
+    <main role="main" class="container">
       
-       <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+      <!-- mobile-hidden add/edit button -->
+      <p class="mobile-hidden light"><a href="edit-player.html" class="btn btn-primary" role="button">Edit Player</a></p>
+
+      <!-- Player -->
+      <div class="row">
+        <div class="col-md-4">
+          <a href="temp.html">
+            <img class="img-fluid round-pic mb-3 mb-md-0" src="http://placehold.it/250x250" alt="Photo of Person McPerson">
+          </a>
+        </div>
+        <div class="col-md-3">
+          <h3>Person McPerson</h3>
+          <h4>Forward</h4>
+          <h5>000010</h5>
+        </div>
+        <div class="col-md-5">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <th scope="row">Date of Birth</th>
+                <td>January 1, 1991</td>
+              </tr>
+              <tr>
+                <th scope="row">Jersey #</th>
+                <td>11</td>
+              </tr>
+              <tr>
+                <th scope="row">Position</th>
+                <td>Forward</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>     
+      </div>
+
+
+      <!-- drop dowm -->
+      <select class="form-control" id="addPlayerPosition">
+          <option value="totalstats">Total stats</option>
+          <option value="game1">Game 1</option>
+          <option value="game2">Game 2</option>
+          <option value="game3">Game 3</option>
+       </select>
+
+
+       <!-- display stats -->
+      <div id="totalstats" class="hidden">
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">Foul</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Red card</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Yellow card</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Shot on goal</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Goal</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Corner kick</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Goal kick</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Penalty kick</th>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th scope="row">Throw-in</th>
+              <td>6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </main>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
