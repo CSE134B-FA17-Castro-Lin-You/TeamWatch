@@ -91,10 +91,6 @@ h3.edit-match-title{
 #img-upload{
 }
 
-.round-pic{
-  border-radius: 50%;
-}
-
 .profile-img{
   border-radius: 50%;
   width: 100px;
@@ -102,10 +98,10 @@ h3.edit-match-title{
   content: url("../images/d-profile.png");
   display: block;
 }
-
-.add-player-btn-delete{
+ 
+ .add-player-btn-delete{
   background-color: #d70101; 
-}
+ }
 
 /* End Han's section */
 
@@ -145,10 +141,6 @@ span.light {
 .jumbotron.bg-gray {
   background-color: #eeeeee;
 }
-
-.centered {
-  text-align: center;
-}
 /* End Harrison's section */
 
 /* For width 768px and larger: */
@@ -174,14 +166,6 @@ span.light {
   
     .desktop-hidden {
         display: none;
-    }
-  
-    .reveal-on-hover {
-      display: none;
-    }
-
-    .show-on-hover:hover > h2 > .reveal-on-hover {
-      display: inline-block;
     }
     /* End Harrison's section for Large Screens */
 }
