@@ -25,16 +25,12 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars fa-lg light"></span>
       </button>
-
       <a class="navbar-brand" href="view-game-schedule.html"><img class="mobile-hidden" src="images/logo.png" alt="teamwatch logo"><img class="desktop-hidden" src="images/logo-small.png" alt="teamwatch logo"></a>
-
-      <!-- desktop-hidden navbar button -->
-      <a href="edit-player.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-pencil fa-lg light"></span></a>
-
+      <a href="view-game-schedule.html" class="btn btn-primary desktop-hidden" role="button"><span class="fa fa-times fa-lg light"></span></a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="teamstats.html">Team Stats <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="teamstats.html">Team Stats</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upcoming Matches</a>
@@ -43,8 +39,8 @@
               <a class="dropdown-item" href="view-game-schedule.html">All Matches</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="record-match-stats.html">Record Match Stats</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="record-match-stats.html">Record Match Stats <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item desktop-hidden">
             <a class="nav-link" href="login.html">Log Out</a>
@@ -54,102 +50,80 @@
       </div>
     </nav>
 
-
-
     <main role="main" class="container">
+      <!-- Page Heading -->
+      <h1 class="my-4">
+        Record Match Stats
+      </h1>
       
-      <!-- mobile-hidden add/edit button -->
-      <p class="mobile-hidden light"><a href="add-player.html" class="btn btn-primary" role="button">Add a New Player</a></p>
-
-      <!-- Player -->
       <div class="row">
         <div class="col-md-4">
-          <a href="temp.html">
-            <img class="img-fluid round-pic mb-3 mb-md-0" src="http://placehold.it/250x250" alt="Photo of Person McPerson">
-          </a>
+          <h3>Time</h3>
+          <p>10/15 Mon at 5:00pm</p>
         </div>
-        <div class="col-md-3">
-          <h3>Person McPerson</h3>
-          <h4>Forward</h4>
-          <h5>000010</h5>
+        <div class="col-md-4">
+          <h3>Location</h3>
+          <p>San Diego Petco Park</p>
         </div>
-        <div class="col-md-5">
-          <table class="table table-striped">
-            <tbody>
-              <tr>
-                <th scope="row">Date of Birth</th>
-                <td>January 1, 1991</td>
-              </tr>
-              <tr>
-                <th scope="row">Jersey #</th>
-                <td>11</td>
-              </tr>
-              <tr>
-                <th scope="row">Position</th>
-                <td>Forward</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>     
+        <div class="col-md-4">
+          <h3>Game Type</h3>
+          <p>Home Game</p>
+        </div>
       </div>
-
-
-      <!-- drop dowm -->
-      <select class="form-control" id="addPlayerPosition">
-          <option value="totalstats">Total stats</option>
-          <option value="game1">Game 1</option>
-          <option value="game2">Game 2</option>
-          <option value="game3">Game 3</option>
-       </select>
-
-
-       <!-- display stats -->
-      <div id="totalstats" class="hidden">
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <th scope="row">Foul</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Red card</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Yellow card</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Shot on goal</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Goal</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Corner kick</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Goal kick</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Penalty kick</th>
-              <td>6</td>
-            </tr>
-            <tr>
-              <th scope="row">Throw-in</th>
-              <td>6</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>My Team</th>
+            <th>Opponent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Foul</th>
+            <td>7</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <th scope="row">Red Card</th>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th scope="row">Yellow Card</th>
+            <td>6</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <th scope="row">Shot on Goal</th>
+            <td>12</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th scope="row">Goal</th>
+            <td>2</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th scope="row">Corner Kick</th>
+            <td>7</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <th scope="row">Goal Kick</th>
+            <td>5</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th scope="row">Possession Time</th>
+            <td>00:54:13</td>
+            <td>00:47:52</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
-
+      
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
